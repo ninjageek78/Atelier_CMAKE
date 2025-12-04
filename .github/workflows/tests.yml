@@ -40,7 +40,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: test-add-report
-          path: build/report.txt      # <-- le fichier à récupérer
+          path: build/report_add.txt      # <-- le fichier à récupérer
           retention-days: 14          # optionnel
 
       - name: Job summary
@@ -117,8 +117,8 @@ jobs:
       - name: Upload report as fonction_carree
         uses: actions/upload-artifact@v4
         with:
-          name: test-add-report
-          path: build/report.txt      # <-- le fichier à récupérer
+          name: test-carree-report
+          path: build/report_carree.txt      # <-- le fichier à récupérer
           retention-days: 14          # optionnel
 
       - name: Job summary
