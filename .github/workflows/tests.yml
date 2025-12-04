@@ -32,9 +32,9 @@ jobs:
         run: |
           cd build
           set -e
-          echo "== Test add 10 5 ==" > report.txt
-          ./src/calculator add 10 5 | tee -a report.txt
-          echo "Exit code: $?" >> report.txt
+          echo "== Test add 10 5 ==" > report_add.txt
+          ./src/calculator add 10 5 | tee -a report_add.txt
+          echo "Exit code: $?" >> report_add.txt
 
       - name: Upload report as fonction_add
         uses: actions/upload-artifact@v4
@@ -48,7 +48,7 @@ jobs:
           echo "### Résultat du test *add*" >> $GITHUB_STEP_SUMMARY
           echo '' >> $GITHUB_STEP_SUMMARY
           echo '' >> $GITHUB_STEP_SUMMARY
-          cat build/report.txt >> $GITHUB_STEP_SUMMARY
+          cat build/report_add.txt >> $GITHUB_STEP_SUMMARY
           echo '' >> $GITHUB_STEP_SUMMARY
   Test_Sub:
     runs-on: ubuntu-latest
@@ -110,9 +110,9 @@ jobs:
         run: |
           cd build
           set -e
-          echo "== Test car 5 ==" > report.txt
-          ./src/calculator car 5 | tee -a report.txt
-          echo "Exit code: $?" >> report.txt
+          echo "== Test car 5 ==" > report_carree.txt
+          ./src/calculator car 5 | tee -a report_carree.txt
+          echo "Exit code: $?" >> report_carree.txt
 
       - name: Upload report as fonction_carree
         uses: actions/upload-artifact@v4
@@ -126,7 +126,7 @@ jobs:
           echo "### Résultat du test *car*" >> $GITHUB_STEP_SUMMARY
           echo '' >> $GITHUB_STEP_SUMMARY
           echo '' >> $GITHUB_STEP_SUMMARY
-          cat build/report.txt >> $GITHUB_STEP_SUMMARY
+          cat build/report_carree.txt >> $GITHUB_STEP_SUMMARY
           echo '' >> $GITHUB_STEP_SUMMARY
   Deploy:
     runs-on: ubuntu-latest
