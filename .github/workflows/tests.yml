@@ -36,14 +36,14 @@ jobs:
           ./src/calculator add 10 5 | tee -a report.txt
           echo "Exit code: $?" >> report.txt
 
-      - name: Upload report as fonction_carree
+      - name: Upload report as fonction_add
         uses: actions/upload-artifact@v4
         with:
           name: test-add-report
           path: build/report.txt      # <-- le fichier à récupérer
           retention-days: 14          # optionnel
 
-      - name: Job summary (facultatif mais pratique)
+      - name: Job summary
         run: |
           echo "### Résultat du test *add*" >> $GITHUB_STEP_SUMMARY
           echo '' >> $GITHUB_STEP_SUMMARY
@@ -121,7 +121,7 @@ jobs:
           path: build/report.txt      # <-- le fichier à récupérer
           retention-days: 14          # optionnel
 
-      - name: Job summary (facultatif mais pratique)
+      - name: Job summary
         run: |
           echo "### Résultat du test *car*" >> $GITHUB_STEP_SUMMARY
           echo '' >> $GITHUB_STEP_SUMMARY
