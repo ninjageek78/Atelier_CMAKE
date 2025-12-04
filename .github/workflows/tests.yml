@@ -36,7 +36,7 @@ jobs:
           ./src/calculator add 10 5 | tee -a report.txt
           echo "Exit code: $?" >> report.txt
 
-      - name: Upload report as artifact
+      - name: Upload report as fonction_carree
         uses: actions/upload-artifact@v4
         with:
           name: test-add-report
@@ -114,7 +114,7 @@ jobs:
           ./src/calculator car 5 | tee -a report.txt
           echo "Exit code: $?" >> report.txt
 
-      - name: Upload report as artifact
+      - name: Upload report as fonction_carree
         uses: actions/upload-artifact@v4
         with:
           name: test-add-report
