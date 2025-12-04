@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: Compilation
     steps:
-      - name: Checkout
+      - name: Test fonction add
         uses: actions/checkout@v4
 
       - name: Build
@@ -96,7 +96,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: Compilation
     steps:
-      - name: Checkout
+      - name: Test fonction car
         uses: actions/checkout@v4
 
       - name: Build
